@@ -12,8 +12,10 @@ namespace Datos.clsConexion
             //string mSqlServer = "LUIIMSSQLSERVER";
             string mSqlIP = "";
             string mSqlServer = "LUII-COMPUTER";
-            string mSqlUser = "sa";
-            string mSqlPassword = "red-888";
+
+            string mSqlUser = "User_React_Aprendiendo";
+            string mSqlPassword = "abc123";
+
             string mSqlDB = "DB_React_Aprendiendo";
             string StringConexion = "Max pool Size=1000;" + 
                 "Data Source=" + mSqlIP + mSqlServer + "; " +
