@@ -1,4 +1,8 @@
-﻿import React, { useState, Fragment } from 'react';
+﻿import React, { useState } from 'react';
+import Style from "./Tarea_Agregar.module.css";
+import Card from '../UI/Card/Card';
+import Button_Add from '../UI/Button/Button_Add';
+import Input from "../UI/Input/Input";
 
 const Tarea_Agregar = (props) => {
 
@@ -26,24 +30,18 @@ const Tarea_Agregar = (props) => {
     };
 
     return (
-        <Fragment>
-            <h2 className="text-white">Lista de tareas.</h2>
-            <div className="row">
-                <div className="col-sm-12">
-                    <form onSubmit={guardarTarea}>
-                        <div className="input-group">
-                            <input type="text"
-                                className="form-control"
-                                placeholder="Ingrese la descripcion"
-                                value={descripcion}
-                                onChange={actualizarDescripcion}
-                            />
-                            <button className="btn btn-success" type="submit">Agregar</button>
-                        </div>
-                    </form>
-                </div>
-            </div>
-        </Fragment>
+        <Card key="card_tarea_agregar">
+            <form onSubmit={guardarTarea} className={Style["input"]}>
+                <Input id="txt_tarea"
+                    type="text"
+                    label="Nueva tarea"
+                    value={descripcion}
+                    onChange={actualizarDescripcion}
+                    placeholder="Ingrese la descripcion">
+                </Input>
+                <Button_Add type="submit">Agregar</Button_Add>
+            </form>
+        </Card>
     );
 };
 

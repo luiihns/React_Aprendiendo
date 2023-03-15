@@ -1,4 +1,7 @@
 ﻿import React from 'react';
+import Style from "./Tarea.module.css";
+import Card from '../UI/Card/Card';
+import Button_Delete from '../UI/Button/Button_Delete';
 
 const Tarea = (props) => {
 
@@ -10,14 +13,15 @@ const Tarea = (props) => {
     };
 
     return (
-        <div key={props.id} className="list-group-item list-group-item-action">
-            <h5 className="text-primary">{props.descripcion}</h5>
-
-            <div className="d-flex justify-content-between">
-                <small className="text-muted">{formatDate(props.fechaCreacion)}</small>
-                <button onClick={() => props.onTareaDeleted(props.id)} className="btn btn-sm btn-outline-danger">Eliminar</button>
-            </div>
-        </div>
+        <li>
+            <Card className={Style["tarea-item"]}>
+                <div className={Style["tarea-item__description"]}>
+                    <h2>{props.descripcion}</h2>
+                    <p>{formatDate(props.fechaCreacion)}</p>
+                    <Button_Delete onClick={() => props.onTareaDeleted(props.id)}>Eliminar</Button_Delete>
+                </div>
+            </Card>
+        </li>
     );
 };
 

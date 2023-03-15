@@ -1,0 +1,10 @@
+﻿.tareas-list {
+    list-style: none;
+    padding: 0;
+    padding-bottom: 1rem;
+}
+
+.tareas-list__result {
+    padding-top: 1rem;
+    text-align: center;
+}

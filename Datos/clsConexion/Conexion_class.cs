@@ -17,6 +17,7 @@ namespace Datos.clsConexion
             string mSqlPassword = "abc123";
 
             string mSqlDB = "DB_React_Aprendiendo";
+
             string StringConexion = "Max pool Size=1000;" + 
                 "Data Source=" + mSqlIP + mSqlServer + "; " +
                 "Initial Catalog=" + mSqlDB + "; " +

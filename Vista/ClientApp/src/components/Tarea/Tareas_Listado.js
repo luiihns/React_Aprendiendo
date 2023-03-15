@@ -1,5 +1,7 @@
 ﻿import React, { Fragment } from 'react';
+import Style from './Tareas_Listado.module.css';
 import Tarea from './Tarea';
+import Card from '../UI/Card/Card';
 
 const Tareas_Listado = (props) => {
 
@@ -16,21 +18,24 @@ const Tareas_Listado = (props) => {
 
     if (props.items.length === 0) {
         return (
-            <h3 className="text-white">No existen tareas registradas.</h3>
+            <h2 className={Style["tareas-list__result"]}>No existen tareas registradas.</h2>
         );
     }
 
     return (
-        <Fragment>
-            {props.items.map((item) => (
-                <Tarea key={item.id}
-                    id={item.id}
-                    descripcion={item.descripcion}
-                    fechaCreacion={item.fechaCreacion}
-                    onTareaDeleted={eliminarTarea}>
-                </Tarea>
-            ))}
-        </Fragment>
+        <Card>
+            <h2 className={Style["tareas-list__result"]}>Lista de tareas.</h2>
+            <ul className={Style["tareas-list"]}>
+                {props.items.map((item) => (
+                    <Tarea key={item.id}
+                        id={item.id}
+                        descripcion={item.descripcion}
+                        fechaCreacion={item.fechaCreacion}
+                        onTareaDeleted={eliminarTarea}>
+                    </Tarea>
+                ))}
+            </ul>
+        </Card>
     );
 };
 
