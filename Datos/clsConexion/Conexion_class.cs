@@ -10,16 +10,14 @@ namespace Datos.clsConexion
         {
             //string mSqlIP = "localhost" + "\"";
             //string mSqlServer = "LUIIMSSQLSERVER";
-            string mSqlIP = "";
-            string mSqlServer = "LUII-COMPUTER";
-
-            string mSqlUser = "User_React_Aprendiendo";
-            string mSqlPassword = "abc123";
-
+            string mSqlServer = "lhns-db-react-aprendiendo.cumcdwizmtzf.sa-east-1.rds.amazonaws.com";
             string mSqlDB = "DB_React_Aprendiendo";
 
+            string mSqlUser = "User_React_Aprendiendo";
+            string mSqlPassword = "Calculo01x22023React";
+
             string StringConexion = "Max pool Size=1000;" + 
-                "Data Source=" + mSqlIP + mSqlServer + "; " +
+                "Data Source=" + mSqlServer + "; " +
                 "Initial Catalog=" + mSqlDB + "; " +
                 "Persist Security Info=True; " +
                 "User ID=" + mSqlUser + ";" +

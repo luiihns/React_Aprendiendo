@@ -44,7 +44,10 @@ namespace Vista
             }
 
             app.UseHttpsRedirection();
-            app.UseStaticFiles();
+            app.UseSpaStaticFiles(new StaticFileOptions {
+                RequestPath="/ClientApp/build"
+            });
+            //app.UseStaticFiles();
             app.UseSpaStaticFiles();
 
             app.UseRouting();
